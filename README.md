@@ -1,2 +1,2 @@
 # dotfiles
-config
+nixos files
