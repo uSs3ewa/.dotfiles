@@ -16,21 +16,23 @@
     };
     # design
     packages = with pkgs; [
-        iosevka
-        (pkgs.nerdfonts.override { fonts = [ "Hack" "Iosevka" "FiraCode" ]; })
-        # wayland setup in future
-        wofi
-        waybar
-        hyprpaper # Background image
-        hyprpicker # Pick color from screen
-        mako
-        libnotify
-        swww
-        networkmanagerapplet
-        brightnessctl
-        wlogout
-        hyprlock
-        superfile
+      iosevka
+      (pkgs.nerdfonts.override { fonts = [ "Hack" "Iosevka" "FiraCode" ]; })
+      # wayland setup in future
+      wofi
+      waybar
+      hyprpaper # Background image
+      hyprpicker # Pick color from screen
+      mako
+      libnotify
+      swww
+      networkmanagerapplet
+      brightnessctl
+      wlogout
+      hyprlock
+      hyprshot
+      ranger
+      ferdium
     ];
     file = {
     	".config/nixpkgs/config.nix".text = ''

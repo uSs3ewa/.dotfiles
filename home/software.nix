@@ -42,11 +42,14 @@
     git
     jdk22
     libclang
-    python3
+    #python3
+    (python3.withPackages(ps: with ps; [ pandas requests pyarrow ]))
     stylua
     lua-language-server
     tmuxifier
     rcm
+    onlyoffice-bin
+    kaggle
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
