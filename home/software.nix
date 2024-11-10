@@ -5,9 +5,7 @@
     ./software/bash.nix
     ./software/direnv.nix
     ./software/gpg.nix
-    #./software/neovim.nix
     ./software/tmux.nix
-    #./software/fish.nix or shell.nix
     ];
 
   programs = {
@@ -42,14 +40,15 @@
     git
     jdk22
     libclang
-    #python3
-    (python3.withPackages(ps: with ps; [ pandas requests pyarrow ]))
+    python312
     stylua
     lua-language-server
     tmuxifier
     rcm
     onlyoffice-bin
     kaggle
+    nodejs_22
+    micromamba
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
