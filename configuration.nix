@@ -9,16 +9,10 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
     ];  
 
-   #home-manager = {
-    #extraSpecialArgs = { inherit inputs; };
-    #users = {
-	   #stoat = import ./home/home.nix;
-    #};
-   #};
     programs.fish.enable = true;
     environment.shells = with pkgs; [ fish ];
     users.defaultUserShell = pkgs.fish;

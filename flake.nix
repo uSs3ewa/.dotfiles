@@ -1,5 +1,4 @@
 {
-
   description = "Main NixOS Flake";
   
   inputs = {
@@ -50,12 +49,21 @@
 		    config = {
 	  	    allowUnfree = true;
 		    };
-	  # overlays = [ ];
       };
 
     in {
+      devShell.x86_64-linux = pkgs.mkShell {
+        buildInputs = [ nixpkgs.git nixpkgs.direnv ];
+      };
+      templates = {
+        python = {
+          path = ./shells/python;
+          description = "A Python dev shell";
+        };
+      };
       nixosConfigurations = {
 	     stoat = lib.nixosSystem {
+        inherit system;
 	      specialArgs = {
 	        inherit inputs;
 	        pkgs-unstable = import nixpkgs-unstable {
