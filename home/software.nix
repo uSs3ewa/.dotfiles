@@ -48,7 +48,6 @@
     onlyoffice-bin
     kaggle
     nodejs_22
-    micromamba
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
