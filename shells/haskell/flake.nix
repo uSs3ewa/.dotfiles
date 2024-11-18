@@ -25,10 +25,6 @@
 
           # Development tools
           hls                           # Haskell Language Server
-          haskellPackages.haskell-language-server # Haskell
-          haskellPackages.ormolu
-          haskellPackages.hlint  # Linter for Haskell
-            haskellPackages.hoogle  # Documentation search engine
         ];
 
         # Optional environment variables
