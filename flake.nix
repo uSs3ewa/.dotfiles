@@ -54,22 +54,18 @@
     in {
       devShell.x86_64-linux = pkgs.mkShell {
         buildInputs = with pkgs; [
-          xorg.libX11
-          linxcb
-          qt5Full
-          mesa
-          glu
         ];
-
-        shellHook = ''
-          export QT_QPA_PLATFORM=xcb
-        '';
       };
       templates = {
         python = {
           path = ./shells/python;
           description = "A Python dev shell";
         };
+      haskell = {
+        path = ./shells/haskell;
+        description = "A Haskell dev shell";
+      };
+        
       };
       nixosConfigurations = {
 	     stoat = lib.nixosSystem {
@@ -91,7 +87,6 @@
               ./system/network.nix
               ./system/software.nix
               ./system/system.nix
-              ./shell.nix
               nix-ld.nixosModules.nix-ld
               { programs.nix-ld.dev.enable = true; }
           ];

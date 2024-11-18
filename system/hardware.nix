@@ -2,7 +2,7 @@
 
 {
   hardware.bluetooth.enable = true;
-
+  sound.enable = true;
   hardware.pulseaudio.enable = false;
   # RealTime Kit - DB hands out real time
   security.rtkit.enable = true;

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -e
+if [[ ! -d "/home/stoat/.dotfiles/shells/haskell" ]]; then
+  echo "Cannot find source directory; Did you move it?"
+  echo "(Looking for "/home/stoat/.dotfiles/shells/haskell")"
+  echo 'Cannot force reload with this script - use "direnv reload" manually and then try again'
+  exit 1
+fi
+
+# rebuild the cache forcefully
+_nix_direnv_force_reload=1 direnv exec "/home/stoat/.dotfiles/shells/haskell" true
+
+# Update the mtime for .envrc.
+# This will cause direnv to reload again - but without re-building.
+touch "/home/stoat/.dotfiles/shells/haskell/.envrc"
+
+# Also update the timestamp of whatever profile_rc we have.
+# This makes sure that we know we are up to date.
+touch -r "/home/stoat/.dotfiles/shells/haskell/.envrc" "/home/stoat/.dotfiles/shells/haskell/.direnv"/*.rc

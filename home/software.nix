@@ -24,7 +24,6 @@
     fastfetch
     fzf
     zoxide
-    zellij
     eza
     bat
     fd
@@ -48,7 +47,9 @@
     onlyoffice-bin
     kaggle
     nodejs_22
-  ];
+    android-tools
+    nixpkgs-fmt  # Formatter for Nix files, optional
+    ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "quartus-prime-lite"

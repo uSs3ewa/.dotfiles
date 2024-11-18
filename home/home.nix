@@ -32,7 +32,6 @@
       hyprlock
       hyprshot
       ranger
-      ferdium
     ];
     file = {
     	".config/nixpkgs/config.nix".text = ''

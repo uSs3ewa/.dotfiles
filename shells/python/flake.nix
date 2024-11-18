@@ -21,24 +21,13 @@
           python312Packages.pyarrow
           python312Packages.dask-expr
           python312Packages.scikit-learn
-          python312Packages.conda 
           python312Packages.pyopengl
           qt5.qtwebengine
           qt5.qtbase
           libGL
           libGLU
           fontconfig
-          xorg.libX11
-          xwayland
-          wayland
-          wayland-protocols
-          mesa
         ];
-
-        shellHook = ''
-          export QT_QPA_PLATFORM=xcb
-          export GDK_BACKEND=x11,wayland
-        '';
       };
     });
 }
