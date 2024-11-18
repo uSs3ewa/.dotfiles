@@ -15,7 +15,6 @@
     excludePackages = with pkgs; with xorg; [
       xrandr
       xrdb
-      setxkbmap
       xlsclients
       xset
       xsetroot
