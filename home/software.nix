@@ -47,8 +47,8 @@
     onlyoffice-bin
     kaggle
     nodejs_22
-    android-tools
     nixpkgs-fmt  # Formatter for Nix files, optional
+    sqlite
     ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
