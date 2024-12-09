@@ -49,6 +49,8 @@
     nodejs_22
     nixpkgs-fmt  # Formatter for Nix files, optional
     sqlite
+    gcc
+    gdb
     ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
