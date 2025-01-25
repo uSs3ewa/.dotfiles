@@ -3,7 +3,7 @@
 {
   programs.dconf.enable = true;
   
-  users.users.gcis.extraGroups = [ "libvirtd" ];
+  users.users.stoat.extraGroups = [ "libvirtd" ];
   
   environment.systemPackages = with pkgs; [
     virt-manager
