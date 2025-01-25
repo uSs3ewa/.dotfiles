@@ -51,6 +51,8 @@
     sqlite
     gcc
     gdb
+    telegram-desktop
+    quickemu
     ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
