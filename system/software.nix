@@ -69,7 +69,6 @@
   environment.systemPackages = with pkgs; [
     # neovim
     micro
-    wget
     firefox-wayland
     home-manager
     quartus-prime-lite
