@@ -6,13 +6,13 @@
     ./software/direnv.nix
     ./software/gpg.nix
     ./software/tmux.nix
-    ];
+  ];
 
   programs = {
     home-manager.enable = true;
     firefox.enable = true;
   };
-  
+
   # utils
   home.packages = with pkgs; [
     # statistics of code
@@ -38,7 +38,7 @@
     ripgrep
     git
     jdk22
-    libclang
+    maven
     python312
     stylua
     lua-language-server
@@ -51,8 +51,9 @@
     sqlite
     gcc
     gdb
-    telegram-desktop
-    quickemu
+    libclang
+    cmake
+    wget
     ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -60,3 +61,4 @@
     "obsidian"
   ];
 }
+

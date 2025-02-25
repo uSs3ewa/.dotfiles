@@ -11,7 +11,6 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ./vm.nix
     ];  
 
     programs.fish.enable = true;
