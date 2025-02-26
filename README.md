@@ -1,2 +1,2 @@
 # .dotfiles
-nixos configuration files
+nixos configuration folder
